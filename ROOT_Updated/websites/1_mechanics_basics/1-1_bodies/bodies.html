@@ -1,46 +1,26 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - Bodies</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Z7TB7SH89Q');
-</script>
+<title>Mekaniikkaa</title>
+<meta charset="UTF-8">
 </head>
 
 <body>
 <div id="wrapper"> 
-  <script language="javascript">displayHeader();</script> 
-  <script language="javascript">displayMenuSub();</script>
-  <div id="nextback">
-    <ul>
-		<li style="float:left"><a href="../1-0_intro/chap1_intro.html">&#8810; Previous Page</a></li>
-		<li style="float:right"><a href="../1-2_position/position.html">Next Page &#8811;</a></li>
-	</ul>
-	</div>
   <div id="maincontent">
-    <h1>Bodies in Engineering Mechanics</h1>
-    <p>A <strong>body</strong>, for the purposes of engineering mechanics, is a collection of matter that is analyzed as a single object. This can be something simple like a rubber ball, or it can be something made of many parts such as a car. What can count as a body and what cannot count as a body is dependent on the circumstances of the analysis. In some circumstances in engineering mechanics, it is useful to make certain assumptions about the bodies being analyzed. We will usually need to assume the body is either rigid or deformable, and we will also need to assume that the body is either a particle or an extended body.</p>
-    <h2>Rigid versus Deformable Bodies</h2>
-    <p>Rigid bodies do not deform (stretch, compress, or bend) when subjected to loads, while deformable bodies do deform. In actuality, no physical body is completely rigid, but most bodies deform so little that this deformation has a minimal impact on the analysis. For this reason, we usually assume that bodies in the statics and dynamics courses are rigid. In the strength of materials course we specifically remove this assumption and examine how bodies deform and eventually fail under loading.</p>
-    <p>There is no set boundary for determining if a body can be approximated as rigid, but there are two factors to look for that indicate that a rigid body assumption is not appropriate. First, if the body is being significantly stretched, compressed, or bent during the period of analysis, then the body should not be analyzed as a rigid body. Second, if the body has parts that are free to move relative to one another, then the body as a whole should not be analyzed as a rigid body (this is instead a machine, comprised of multiple connected bodies that will each need to be analyzed separately).</p>
+    <h1>Kappaleet mekaniikassa</h1>
+    <p>Mekaniikassa <strong>kappale</strong> on joukko materiaa, jota tarkastellaan yhtenä kokonaisuutena.  Kappale voi olla yksinkertainen, kuten pallo, tai se voi koostua useasta osasta, kuten ajoneuvo.  Tarkasteltavasta tilanteesta riippuen kappaleeksi voidaan mieltää erilaisia kokonaisuuksia.  Usein on hyödyllistä tehdä kappaleista oletuksia, kuten että kappale on pistemäinen tai jäykkä.</p>
+    <h2>Jäykkä vai joustava kappale?</h2>
+    <p>Jäykät kappaleet eivät muuta muotoaan (veny, puristu tai taivu), jos niitä kuormitetaan, kun taas joustavat kappaleet muuttavat muotoaan.  Todellisuudessa mikään kappale ei ole täysin jäykkä, mutta monet kappaleet muuttavat muotoaan niin vähän, että muodonmuutoksella ei ole vaikutusta tarkasteltavassa tilanteessa.  Tästä syystä statiikassa ja dynamiikassa usein oletetaan, että kappaleet ovat jäykkiä.  Kiinteän aineen mekaniikassa (ns. lujuusopissa) tätä oletusta ei ole, koska tavoitteena on nimenomaan tarkastella kappaleen muodonmuutosta ja jännitystä.</p>
+        <p>Ei ole olemassa helppoa ehtoa sille, että milloin kappaletta voi tarkastella jäykkänä, mutta kaksi selvää tapausta ovat: jos kappaletta vedetään, puristetaan tai taivutetaan merkittävästi tarkastelun aikana, niin sitä ei tulisi tarkastella jäykkänä, ja jos kappaleella on osia, jotka voivat liikkua suhteessa toisiinsa, niin kappaleetta ei voi tarkastella jäykkänä (tällöin kyseessä on kone, joka koostuu useammasta erikseen tarkasteltavasta kappaleesta).</p>
 	<figure class="center"><img src="images/hammer.jpg" width="300" height="135" alt="A claw hammer"/>
-      <figcaption>This hammer is a good example of a rigid body for analysis. It deforms little under regular use and does not have any pieces that move relative to one another. Public Domain image, no author listed.</figcaption>
+      <figcaption>Vasara on hyvä esimerkki jäykästä kappaleesta.  Se taipuu vähän tavallisessa käytössä ja siinä ei ole liikkuvia osia. Public Domain image, no author listed.</figcaption>
     </figure>
 	<figure class="center"><img src="images/carcrash.jpg" width="300" height="195" alt="A car impacting a wall in a crash test."/>
-      <figcaption>This car deformed significantly during the crash test. When analyzing the impact, we should not treat the car as a rigid body. Image by Brady Holt CC-BY-3.0.</figcaption>
+      <figcaption>Auto muuttaa muotoaan merkittävästi törmäyskokeessa. Kun tutkitaan törmäystä, ei autoa voi tarkastella jäykkänä kappaleena. Image by Brady Holt CC-BY-3.0.</figcaption>
     </figure>
 	<figure class="center"><img src="images/scissors.jpg" width="300" height="225" alt="A pair of scissors"/>
-      <figcaption>This pair of scissors consists of two halves held together with a rivet. Because the two halves can move relative to one another, the pair of scissors as whole should not be treated as a rigid body. Image by ZooFari CC-BY-SA 3.0.</figcaption>
+      <figcaption>Sakset koostuvat kahdesta osasta.  Koska osat liikkuvat toistensa suhteen, ei saksia voi tarkastella yhtenä jäykkänä kappaleena. Image by ZooFari CC-BY-SA 3.0.</figcaption>
     </figure>
     <h2>Particles versus Extended Bodies:</h2>
     <p><strong>Particles</strong> are bodies where all the mass is concentrated at a single point in space. Particle analysis will only have to take into account the forces acting on the body and translational motion because rotation is not considered for particles. Extended bodies on the other hand have mass that is distributed throughout a finite volume. Often in engineering statics, we will take a shortcut and say <strong>rigid bodies</strong> to describe extended bodies that also happen to be rigid. This is because particles, as a single point, cannot deform. Extended body analysis is more complex and also has to take into account moments and rotational motions. In actuality, no bodies are truly particles, but some bodies can be approximated as particles to simplify analysis. Bodies are often assumed to be particles if the rotational motions are negligible when compared to the translational motions, or in systems where there is no moment exerted on the body such as a concurrent force system.</p>
@@ -54,14 +34,6 @@
       <figcaption>Rotation and moments will be key to the analysis of the crowbar in this system, therefore the crowbar needs to be analyzed as an extended body. Public Domain image by Pearson Scott Foresman.</figcaption>
     </figure>
   </div>
-  <div id="sidebar"> <br/>
-    <h2>Video Lecture</h2>
-    <div class="video">
-      <iframe width="260" height="146" src="https://www.youtube.com/embed/-ETzKW31aZI" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <script language="javascript">displayResources();</script> 
-  </div>
-  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
 </html>
