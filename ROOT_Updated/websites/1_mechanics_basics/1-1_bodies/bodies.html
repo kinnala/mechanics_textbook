@@ -9,10 +9,10 @@
 <div id="wrapper"> 
   <div id="maincontent">
     <h1>Kappaleet mekaniikassa</h1>
-    <p>Mekaniikassa <strong>kappale</strong> on joukko materiaa, jota tarkastellaan yhtenä kokonaisuutena.  Kappale voi olla yksinkertainen, kuten pallo, tai se voi koostua useasta osasta, kuten ajoneuvo.  Tarkasteltavasta tilanteesta riippuen kappaleeksi voidaan mieltää erilaisia kokonaisuuksia.  Usein on hyödyllistä tehdä kappaleista oletuksia, kuten että kappale on pistemäinen tai jäykkä.</p>
+    <p>Mekaniikassa <strong>kappale</strong> on kokoelma materiaa, jota tarkastellaan yhtenä kokonaisuutena.  Kappale voi olla yksittäinen, kuten pallo, tai se voi koostua useasta osasta, kuten ajoneuvo.  Tarkasteltavasta tilanteesta riippuen kappaleeksi voidaan mieltää erilaisia monimutkaisemman rakennelman osajoukkoja.  Usein on hyödyllistä myös tehdä kappaleista oletuksia kuten kappale on pistemäinen tai kappale on jäykkä.</p>
     <h2>Jäykkä vai joustava kappale?</h2>
-    <p>Jäykät kappaleet eivät muuta muotoaan (veny, puristu tai taivu), jos niitä kuormitetaan, kun taas joustavat kappaleet muuttavat muotoaan.  Todellisuudessa mikään kappale ei ole täysin jäykkä, mutta monet kappaleet muuttavat muotoaan niin vähän, että muodonmuutoksella ei ole vaikutusta tarkasteltavassa tilanteessa.  Tästä syystä statiikassa ja dynamiikassa usein oletetaan, että kappaleet ovat jäykkiä.  Kiinteän aineen mekaniikassa (ns. lujuusopissa) tätä oletusta ei ole, koska tavoitteena on nimenomaan tarkastella kappaleen muodonmuutosta ja jännitystä.</p>
-        <p>Ei ole olemassa helppoa ehtoa sille, että milloin kappaletta voi tarkastella jäykkänä, mutta kaksi selvää tapausta ovat: jos kappaletta vedetään, puristetaan tai taivutetaan merkittävästi tarkastelun aikana, niin sitä ei tulisi tarkastella jäykkänä, ja jos kappaleella on osia, jotka voivat liikkua suhteessa toisiinsa, niin kappaleetta ei voi tarkastella jäykkänä (tällöin kyseessä on kone, joka koostuu useammasta erikseen tarkasteltavasta kappaleesta).</p>
+    <p>Jäykät kappaleet eivät muuta muotoaan (veny, puristu tai taivu), jos niitä kuormitetaan, kun taas joustavat kappaleet muuttavat.  Todellisuudessa mikään kappale ei ole täysin jäykkä, mutta monet kappaleet muuttavat muotoaan niin vähän, että muodonmuutoksella ei ole vaikutusta tarkasteltavan tilanteen kannalta.  Tästä syystä statiikassa usein oletetaan, että kappaleet ovat jäykkiä.  Kiinteän aineen mekaniikassa (ns. lujuusopissa) tätä oletusta ei ole, koska tavoitteena on nimenomaan tarkastella muodonmuutosta ja sen aikaansaamaa jännitystä.</p>
+        <p>Ei ole olemassa helppoa ehtoa milloin kappaletta voi tarkastella jäykkänä, mutta kaksi selvää tapausta ovat: jos kappaletta vedetään, puristetaan tai taivutetaan tavallista voimakkaammin tarkastelun aikana, niin sitä ei tulisi tarkastella jäykkänä, ja jos kappaleella on osia, jotka voivat liikkua suhteessa toisiinsa, niin kappaleetta ei voi tarkastella jäykkänä (tällöin kyseessä on kone tai mekanismi, joka koostuu useammasta erikseen tarkasteltavasta kappaleesta).</p>
 	<figure class="center"><img src="images/hammer.jpg" width="300" height="135" alt="A claw hammer"/>
       <figcaption>Vasara on hyvä esimerkki jäykästä kappaleesta.  Se taipuu vähän tavallisessa käytössä ja siinä ei ole liikkuvia osia. Public Domain image, no author listed.</figcaption>
     </figure>
@@ -22,16 +22,17 @@
 	<figure class="center"><img src="images/scissors.jpg" width="300" height="225" alt="A pair of scissors"/>
       <figcaption>Sakset koostuvat kahdesta osasta.  Koska osat liikkuvat toistensa suhteen, ei saksia voi tarkastella yhtenä jäykkänä kappaleena. Image by ZooFari CC-BY-SA 3.0.</figcaption>
     </figure>
-    <h2>Particles versus Extended Bodies:</h2>
-    <p><strong>Particles</strong> are bodies where all the mass is concentrated at a single point in space. Particle analysis will only have to take into account the forces acting on the body and translational motion because rotation is not considered for particles. Extended bodies on the other hand have mass that is distributed throughout a finite volume. Often in engineering statics, we will take a shortcut and say <strong>rigid bodies</strong> to describe extended bodies that also happen to be rigid. This is because particles, as a single point, cannot deform. Extended body analysis is more complex and also has to take into account moments and rotational motions. In actuality, no bodies are truly particles, but some bodies can be approximated as particles to simplify analysis. Bodies are often assumed to be particles if the rotational motions are negligible when compared to the translational motions, or in systems where there is no moment exerted on the body such as a concurrent force system.</p>
+    <h2>Pistemäinen vai jäykkä kappale?</h2>
+    <p><strong>Pistemäisessä kappaleessa</strong> kaikki massa on keskittynyt yhteen avaruuden pisteeseen.  Pistemäisen kappaleen analysoinnissa huomioidaan vain siihen vaikuttavat voimat eikä kappaleen pyörimistä huomioida.  Jäykässä kappaleessa taas massa on jakautunut äärelliselle alueelle.  Tällöin on huomioitava kappaleen vaaka- ja pystysuuntaisen liikkeen lisäksi pyöriminen.  Todellisuudessa mikään kappale ei ole pistemäinen, mutta oletus usein yksinkertaistaa tilanteen analysointia.  Kappaleita voi usein approksimoida pistemäisinä jos pyörimisliike ei ole tilanteen kannalta oleellista ja kappaleisiin ei kohdistu vääntöä.</p>
+        
 	<figure class="center"><img src="images/comet.jpg" width="300" height="168" alt="A comet moving through space"/>
-      <figcaption>The rotation of this comet and the moments exerted on the comet are unimportant in modeling its trajectory through space, therefore we would treat it as a particle. Public Domain image by Buddy Nath.</figcaption>
+      <figcaption>Tämän komeetan pyöriminen ja siihen kohdistuvat momentit eivät juurikaan vaikuta sen rataan avaruudessa ja siksi sitä voidaan tarkastella pistemäisenä kappaleena. Public Domain image by Buddy Nath.</figcaption>
     </figure>
 	<figure class="center"><img src="images/skycam.jpg" width="250" height="140" alt="A camera supported by several cables"/>
-      <figcaption>The gravitational forces and the tension forces on the skycam all act through a single point, making this a concurrent force system that can be analyzed as a particle. Image by Despeaux CC-BY-SA 3.0.</figcaption>
+      <figcaption>Painovoiman ja vaijereiden jännitysvoimien vaikutussuorat leikkaavat samassa pisteessä, joten kuvan kameraa voidaan tarkastella pistemäisenä kappaleena. Image by Despeaux CC-BY-SA 3.0.</figcaption>
     </figure>
 	<figure class="center"><img src="images/crowbar.jpg" width="150" height="228" alt="A man using a crowbar on a pallet"/>
-      <figcaption>Rotation and moments will be key to the analysis of the crowbar in this system, therefore the crowbar needs to be analyzed as an extended body. Public Domain image by Pearson Scott Foresman.</figcaption>
+      <figcaption>Pyöriminen ja momentit ovat avainasemassa analysoitaessa kuvan sorkkarautaa.  Tästä syystä se on analysoitava jäykkänä kappaleena. Public Domain image by Pearson Scott Foresman.</figcaption>
     </figure>
   </div>
 </div>
